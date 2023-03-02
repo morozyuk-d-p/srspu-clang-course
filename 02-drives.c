@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-    char num = 0;
     DWORD drives = GetLogicalDrives();
     printf("Drives list:\n");
-    do
+    
+    for (int i = 0; i < 26; i++)
     {
-        num++;
-        if (drives % 2 == 1) {
-            printf("%c\n", num + 64);
+        if (drives & (1 << i)) {
+            printf("%c\n", i + 65);
         }
-        drives = drives / 2;
-    } while (drives != 0);
+    }
+    
     return 0;
 }

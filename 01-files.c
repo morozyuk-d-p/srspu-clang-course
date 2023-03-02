@@ -3,8 +3,8 @@
 int main() {
     FILE *file1, *file2;
 
-    file1 = fopen(".\\file1.txt", "r");
-    file2 = fopen(".\\file2.txt", "w");
+    file1 = fopen(".\\files.c", "r");
+    file2 = fopen(".\\files2.c", "w");
 
     char buf;
 
