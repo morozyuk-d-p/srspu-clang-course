@@ -6,7 +6,7 @@ void ShowVolumeInfo(char DriveLetter);
 void ShowClustersInfo(char DriveLetter);
 void ShowFreeSpaceInfo(char DriveLetter);
 
-int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+int main()
 {
     DWORD drives = GetLogicalDrives();
 
